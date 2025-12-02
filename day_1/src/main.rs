@@ -2,6 +2,7 @@ use std::io::{self, BufRead};
 
 use rootcause::{Report, prelude::ResultExt, report};
 
+#[allow(dead_code)]
 fn part_1(input: &str) -> Result<i32, Report> {
     let nums = input
         .split('\n')
@@ -115,7 +116,8 @@ fn main() -> Result<(), Report> {
 
     input.pop();
 
-    println!("{}", part_2(input.as_str())?);
+    println!("Part 1 = {}", part_1(input.as_str())?);
+    println!("Part 2 = {}", part_2(input.as_str())?);
 
     Ok(())
 }
